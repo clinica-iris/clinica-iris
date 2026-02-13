@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Nostre Equip - Clínica Oftalmològica Iris</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Outfit"', 'sans-serif'],
+                    },
+                    colors: {
+                        iris: {
+                            blue: '#0077B6',
+                            green: '#4ADE80',
+                            dark: '#023E8A',
+                            light: '#CAF0F8'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        .glass {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+        }
+        
+        .glass-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.6);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .glass-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 40px rgba(0, 119, 182, 0.15);
+            border-color: #4ADE80;
+        }
+
+        .bg-gradient-iris {
+            background: radial-gradient(circle at top left, #CAF0F8, transparent 40%),
+                        radial-gradient(circle at bottom right, #f0fdf4, transparent 40%);
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-700 bg-gradient-iris min-h-screen relative selection:bg-iris-blue selection:text-white flex flex-col">
+
+    <nav class="fixed w-full z-50 top-0 p-4">
+        <div class="glass rounded-full max-w-7xl mx-auto px-6 py-2 flex justify-between items-center shadow-sm">
+            
+            <a href="index.html" class="flex items-center shrink-0 hover:opacity-80 transition-opacity">
+                <img src="logo.png" alt="Clínica Iris" class="h-10 w-auto object-contain">
+            </a>
+
+            <div class="hidden md:flex items-center gap-8 font-medium text-slate-600 text-sm">
+                <a href="/index.html" class="hover:text-iris-blue transition-colors">Inici</a>
+                <a href="/trabaja.html" class="hover:text-iris-blue transition-colors">Treballa</a>
+                <a href="/serveis.html" class="hover:text-iris-blue transition-colors">Serveis</a>
+                <a href="/equip.html" class="hover:text-iris-blue transition-colors">Equip</a>
+                <a href="/cita.html" class="bg-iris-blue hover:bg-iris-dark text-white px-5 py-2.5 rounded-full transition-all shadow-lg hover:shadow-iris-blue/30">
+                    Demanar Cita
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="flex-grow pt-32 pb-20 px-4">
+        <div class="max-w-7xl mx-auto">
+            
+            <div class="text-center mb-16 max-w-3xl mx-auto">
+                <span class="text-iris-blue text-sm font-bold tracking-widest uppercase">ORGANIGRAMA</span>
+                <h1 class="text-4xl md:text-5xl font-bold text-slate-900 mt-2 mb-4">Un equip compromès amb tu</h1>
+                <p class="text-slate-600">
+                    La nostra estructura horitzontal fomenta la col·laboració entre especialistes per oferir una atenció integral i humana[cite: 351].
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                
+                <div class="lg:col-span-1 space-y-6">
+                    <div class="glass-card p-8 rounded-3xl border-l-4 border-iris-dark h-full relative overflow-hidden">
+                        <div class="absolute top-0 right-0 w-32 h-32 bg-iris-light rounded-full blur-2xl opacity-50"></div>
+                        
+                        <h3 class="text-xl font-bold text-slate-900 mb-6 flex items-center gap-2">
+                            <i data-lucide="briefcase" class="text-iris-dark"></i> Direcció i Gestió
+                        </h3>
+
+                        <div class="space-y-6 relative z-10">
+                            <div>
+                                <p class="text-xs font-bold text-iris-dark uppercase mb-1">DIRECCIÓ GENERAL</p>
+                                <p class="font-bold text-slate-800 text-lg">Jeanet Leguizamon</p>
+                                <p class="text-xs text-slate-500">Coordinació global i estratègia [cite: 341-342].</p>
+                            </div>
+
+                            <div class="w-full h-px bg-slate-200"></div>
+
+                            <div>
+                                <p class="text-xs font-bold text-iris-dark uppercase mb-1">RECURSOS HUMANS</p>
+                                <p class="font-bold text-slate-800">Camila Frias</p>
+                                <p class="text-xs text-slate-500">Gestió del talent i benestar laboral [cite: 343-344].</p>
+                            </div>
+
+                            <div class="w-full h-px bg-slate-200"></div>
+                            
+                            <div>
+                                <p class="text-xs font-bold text-iris-dark uppercase mb-1">CAP DE PERSONAL</p>
+                                <p class="font-bold text-slate-800">Marc Godoy</p>
+                                <p class="text-xs text-slate-500">Coordinació diària de l'equip[cite: 348].</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-6">
+                    
+                    <div class="glass-card p-6 rounded-2xl border-l-4 border-iris-blue hover:bg-white/60 transition-colors">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="p-2 bg-iris-light rounded-lg text-iris-blue"><i data-lucide="eye"></i></div>
+                            <h4 class="font-bold text-slate-800">Equip Mèdic</h4>
+                        </div>
+                        <ul class="space-y-3 text-sm text-slate-700">
+                            <li class="flex items-center gap-2">
+                                <span class="w-1.5 h-1.5 bg-iris-blue rounded-full"></span> 
+                                <span><strong>Dr. Hector Francoliti</strong> (Oftalmòleg)</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <span class="w-1.5 h-1.5 bg-iris-blue rounded-full"></span> 
+                                <span><strong>Dra. Nerea Tramunt</strong> (Oftalmòloga)</span>
+                            </li>
+                            <li class="mt-2 pt-2 border-t border-slate-100 flex items-center gap-2">
+                                <span class="w-1.5 h-1.5 bg-iris-green rounded-full"></span> 
+                                <span><strong>Josep Ruiz</strong> (Optometrista) [cite: 352]</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="glass-card p-6 rounded-2xl border-l-4 border-iris-green hover:bg-white/60 transition-colors">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="p-2 bg-green-100 rounded-lg text-iris-green"><i data-lucide="microscope"></i></div>
+                            <h4 class="font-bold text-slate-800">Tècnics Especialistes</h4>
+                        </div>
+                        <ul class="space-y-3 text-sm text-slate-700">
+                            <li class="flex items-center gap-2">
+                                <i data-lucide="check" size="14" class="text-iris-green"></i> Claudia LaTorre
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i data-lucide="check" size="14" class="text-iris-green"></i> Joaquim Blume
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="glass-card p-6 rounded-2xl border-l-4 border-slate-400 hover:bg-white/60 transition-colors">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="p-2 bg-slate-100 rounded-lg text-slate-600"><i data-lucide="heart-pulse"></i></div>
+                            <h4 class="font-bold text-slate-800">Infermeria</h4>
+                        </div>
+                        <div class="grid grid-cols-2 gap-2 text-sm text-slate-700">
+                            <span>• Carlons Gonzalez</span>
+                            <span>• Estefania Sanchez</span>
+                            <span>• Luis Domínguez</span>
+                            <span>• Tania Planas</span>
+                        </div>
+                    </div>
+
+                    <div class="glass-card p-6 rounded-2xl border-l-4 border-purple-400 hover:bg-white/60 transition-colors">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="p-2 bg-purple-100 rounded-lg text-purple-600"><i data-lucide="users"></i></div>
+                            <h4 class="font-bold text-slate-800">Atenció al Pacient</h4>
+                        </div>
+                        <p class="text-xs text-slate-500 mb-3">Gestió de cites i documentació [cite: 349-350].</p>
+                        <div class="grid grid-cols-2 gap-2 text-sm text-slate-700">
+                            <span>• Carla Gutierrez</span>
+                            <span>• Anthony Maor</span>
+                            <span>• Pol Lopez</span>
+                            <span>• Irene Gracia</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="mt-8 text-center">
+                <p class="text-xs text-slate-400">
+                    Agraïment especial al nostre equip de neteja i manteniment: <strong>Mohamed i Estela</strong>, per garantir un entorn segur[cite: 347].
+                </p>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="glass mt-auto py-8 border-t border-white">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-slate-500">
+            <p>© 2025 Clínica Oftalmològica Iris. Tots els drets reservats.</p>
+            <div class="flex gap-6">
+                <a href="#" class="hover:text-iris-blue transition-colors">Avís Legal</a>
+                <a href="#" class="hover:text-iris-blue transition-colors">Política de Privacitat</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>

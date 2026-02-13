@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demanar Cita - Clínica Oftalmològica Iris</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Outfit"', 'sans-serif'],
+                    },
+                    colors: {
+                        iris: {
+                            blue: '#0077B6',
+                            green: '#4ADE80',
+                            dark: '#023E8A',
+                            light: '#CAF0F8'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        .glass {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+        }
+        
+        .glass-card {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.6);
+            box-shadow: 0 10px 40px rgba(0, 119, 182, 0.1);
+        }
+
+        .bg-gradient-iris {
+            background: radial-gradient(circle at top left, #CAF0F8, transparent 40%),
+                        radial-gradient(circle at bottom right, #f0fdf4, transparent 40%);
+        }
+
+        /* Animación suave para los inputs */
+        input:focus, select:focus, textarea:focus {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 119, 182, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-700 bg-gradient-iris min-h-screen flex flex-col relative selection:bg-iris-blue selection:text-white">
+
+    <nav class="fixed w-full z-50 top-0 p-4">
+        <div class="glass rounded-full max-w-7xl mx-auto px-6 py-2 flex justify-between items-center shadow-sm">
+            <a href="/index.html" class="flex items-center shrink-0 hover:opacity-80 transition-opacity">
+                <img src="/logo.png" alt="Clínica Iris" class="h-10 w-auto object-contain">
+                <span class="ml-2 font-bold text-iris-dark hidden sm:block">TORNAR A L'INICI</span>
+            </a>
+
+            <a href="tel:935451550" class="flex items-center gap-2 text-iris-blue font-bold text-sm bg-iris-light/50 px-4 py-2 rounded-full hover:bg-iris-blue hover:text-white transition-all">
+                <i data-lucide="phone" size="16"></i> 93 545 15 50
+            </a>
+        </div>
+    </nav>
+
+    <main class="flex-grow pt-32 pb-20 px-4">
+        <div class="max-w-6xl mx-auto">
+            
+            <div class="text-center mb-12">
+                <h1 class="text-4xl md:text-5xl font-bold text-slate-900 mb-4">Sol·licitud de Visita</h1>
+                <p class="text-slate-600 max-w-2xl mx-auto">
+                    Omple el formulari i el nostre equip d'admissions es posarà en contacte amb tu per confirmar el dia i l'hora de la teva cita[cite: 320].
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                
+                <div class="lg:col-span-1 space-y-6">
+                    <div class="glass-card rounded-3xl p-8 border-t-4 border-iris-blue">
+                        <h3 class="font-bold text-xl text-iris-dark mb-6">Informació al Pacient</h3>
+                        
+                        <ul class="space-y-6">
+                            <li class="flex gap-4">
+                                <div class="w-10 h-10 rounded-full bg-iris-light flex items-center justify-center text-iris-blue shrink-0">
+                                    <i data-lucide="clock"></i>
+                                </div>
+                                <div>
+                                    <p class="font-bold text-slate-800 text-sm">Horari d'Atenció</p>
+                                    <p class="text-sm text-slate-600">Dl-Dv: 07:00 - 22:00</p>
+                                    <p class="text-sm text-slate-600">Dissabtes: 09:00 - 20:00</p>
+                                </div>
+                            </li>
+                            
+                            <li class="flex gap-4">
+                                <div class="w-10 h-10 rounded-full bg-iris-light flex items-center justify-center text-iris-blue shrink-0">
+                                    <i data-lucide="map-pin"></i>
+                                </div>
+                                <div>
+                                    <p class="font-bold text-slate-800 text-sm">On estem?</p>
+                                    <p class="text-sm text-slate-600">c/ Joaquim Blume, nº2</p>
+                                    <p class="text-sm text-slate-600">08120, La Llagosta [cite: 9]</p>
+                                </div>
+                            </li>
+
+                            <li class="flex gap-4">
+                                <div class="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center text-green-600 shrink-0">
+                                    <i data-lucide="file-check"></i>
+                                </div>
+                                <div>
+                                    <p class="font-bold text-slate-800 text-sm">Recordatori</p>
+                                    <p class="text-xs text-slate-500 leading-relaxed">
+                                        Si és la teva primera visita, recorda portar el teu DNI i la targeta de la mútua si en tens[cite: 327].
+                                    </p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-iris-dark text-white rounded-3xl p-8 relative overflow-hidden">
+                        <div class="absolute top-0 right-0 w-32 h-32 bg-iris-blue rounded-full blur-3xl opacity-50"></div>
+                        <div class="relative z-10">
+                            <h3 class="font-bold text-lg mb-2 flex items-center gap-2">
+                                <i data-lucide="alert-circle" class="text-iris-green"></i> Urgències
+                            </h3>
+                            <p class="text-sm text-iris-light/80 mb-4">
+                                Per a urgències oculars greus fora d'horari, si us plau contacta amb el 061 o acudeix a l'hospital més proper[cite: 476].
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-2">
+                    <div class="glass-card rounded-[2.5rem] p-8 md:p-12 relative">
+                        <form class="space-y-8">
+                            
+                            <div>
+                                <h3 class="text-sm font-bold text-iris-blue uppercase tracking-widest mb-6 border-b border-slate-200 pb-2">Dades del Pacient</h3>
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                    <div class="space-y-2">
+                                        <label class="text-xs font-bold text-slate-700 ml-1">Nom i Cognoms *</label>
+                                        <input type="text" required class="w-full bg-white/50 border border-slate-200 rounded-xl px-4 py-3 focus:border-iris-blue focus:ring-1 focus:ring-iris-blue outline-none transition-all" placeholder="Nom complet">
+                                    </div>
+                                    <div class="space-y-2">
+                                        <label class="text-xs font-bold text-slate-700 ml-1">DNI / NIE *</label>
+                                        <input type="text" required class="w-full bg-white/50 border border-slate-200 rounded-xl px-4 py-3 focus:border-iris-blue focus:ring-1 focus:ring-iris-blue outline-none transition-all" placeholder="Document d'identitat">
+                                    </div>
+                                    <div class="space-y-2">
+                                        <label class="text-xs font-bold text-slate-700 ml-1">Telèfon de contacte *</label>
+                                        <input type="tel" required class="w-full bg-white/50 border border-slate-200 rounded-xl px-4 py-3 focus:border-iris-blue focus:ring-1 focus:ring-iris-blue outline-none transition-all" placeholder="600 000 000">
+                                    </div>
+                                    <div class="space-y-2">
+                                        <label class="text-xs font-bold text-slate-700 ml-1">Correu Electrònic</label>
+                                        <input type="email" class="w-full bg-white/50 border border-slate-200 rounded-xl px-4 py-3 focus:border-iris-blue focus:ring-1 focus:ring-iris-blue outline-none transition-all" placeholder="exemple@email.com">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div>
+                                <h3 class="text-sm font-bold text-iris-green uppercase tracking-widest mb-6 border-b border-slate-200 pb-2">Detalls de la Visita</h3>
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                    <div class="space-y-2">
+                                        <label class="text-xs font-bold text-slate-700 ml-1">Tipus de Visita [cite: 243-246]</label>
+                                        <select class="w-full bg-white/50 border border-slate-200 rounded-xl px-4 py-3 text-slate-600 focus:border-iris-green focus:ring-1 focus:ring-iris-green outline-none transition-all">
+                                            <option>Primera Visita</option>
+                                            <option>Revisió Anual</option>
+                                            <option>Revisió Post-Quirúrgica</option>
+                                            <option>Urgència (Demanar hora aviat)</option>
+                                        </select>
+                                    </div>
+                                    
+                                    <div class="space-y-2">
+                                        <label class="text-xs font-bold text-slate-700 ml-1">Especialitat / Motiu [cite: 251-255]</label>
+                                        <select class="w-full bg-white/50 border border-slate-200 rounded-xl px-4 py-3 text-slate-600 focus:border-iris-green focus:ring-1 focus:ring-iris-green outline-none transition-all">
+                                            <option value="">No ho sé / General</option>
+                                            <option>Optometria / Graduació</option>
+                                            <option>Oftalmologia Pediàtrica</option>
+                                            <option>Cataractes</option>
+                                            <option>Retina i Glaucoma</option>
+                                            <option>Oculoplàstia</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="space-y-2 md:col-span-2">
+                                        <label class="text-xs font-bold text-slate-700 ml-1">Assegurança Mèdica</label>
+                                        <div class="flex gap-6 mt-2">
+                                            <label class="flex items-center gap-2 cursor-pointer">
+                                                <input type="radio" name="seguro" class="accent-iris-blue w-4 h-4">
+                                                <span class="text-sm text-slate-600">Pacient Privat</span>
+                                            </label>
+                                            <label class="flex items-center gap-2 cursor-pointer">
+                                                <input type="radio" name="seguro" class="accent-iris-blue w-4 h-4">
+                                                <span class="text-sm text-slate-600">Mútua / Assegurança</span>
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                    <div class="space-y-2 md:col-span-2">
+                                        <label class="text-xs font-bold text-slate-700 ml-1">Observacions o Preferència Horària</label>
+                                        <textarea rows="3" class="w-full bg-white/50 border border-slate-200 rounded-xl px-4 py-3 focus:border-iris-blue focus:ring-1 focus:ring-iris-blue outline-none transition-all resize-none" placeholder="Ex: Preferiblement tardes a partir de les 17h..."></textarea>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="pt-4 border-t border-slate-100">
+                                <label class="flex items-start gap-3 cursor-pointer group">
+                                    <input type="checkbox" required class="mt-1 accent-iris-blue w-4 h-4">
+                                    <span class="text-xs text-slate-500 leading-snug group-hover:text-slate-700 transition-colors">
+                                        He llegit i accepto la política de privacitat. Les meves dades seran tractades segons el RGPD i la Llei Orgànica 3/2018 per a la gestió assistencial i administrativa de la Clínica Iris[cite: 189].
+                                    </span>
+                                </label>
+
+                                <button type="submit" class="w-full mt-8 bg-gradient-to-r from-iris-dark to-iris-blue hover:from-slate-800 hover:to-slate-900 text-white font-bold py-4 rounded-xl shadow-lg shadow-iris-blue/20 transform transition hover:-translate-y-1 flex items-center justify-center gap-2">
+                                    <span>ENVIAR SOL·LICITUD</span>
+                                    <i data-lucide="send" size="18"></i>
+                                </button>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <footer class="glass py-6 border-t border-white">
+        <div class="max-w-7xl mx-auto px-6 text-center text-xs text-slate-500">
+            <p>© 2025 Clínica Oftalmològica Iris. Tots els drets reservats.</p>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>

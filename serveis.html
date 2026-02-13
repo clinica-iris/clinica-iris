@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clínica Oftalmològica Iris - Una nova visió del futur</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Outfit"', 'sans-serif'],
+                    },
+                    colors: {
+                        iris: {
+                            blue: '#0077B6',   // Blau: Claredat, precisió, confiança
+                            green: '#4ADE80',  // Verd: Renovació, vitalitat, benestar
+                            dark: '#023E8A',
+                            light: '#CAF0F8'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Efecto Glassmorphism suave */
+        .glass {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+        }
+        
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.6);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+        }
+
+        .glass-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 40px rgba(0, 119, 182, 0.15);
+        }
+
+        /* Degradado de fondo */
+        .bg-gradient-iris {
+            background: radial-gradient(circle at top left, #CAF0F8, transparent 40%),
+                        radial-gradient(circle at bottom right, #f0fdf4, transparent 40%);
+        }
+        
+        /* Animación suave para el menú móvil */
+        #mobile-menu {
+            transition: all 0.3s ease-in-out;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-700 bg-gradient-iris min-h-screen relative selection:bg-iris-blue selection:text-white pb-20">
+
+    <nav class="fixed w-full z-50 top-0 p-4">
+        <div class="glass rounded-full max-w-7xl mx-auto px-6 py-3 flex justify-between items-center shadow-sm relative">
+            
+           <a href="/index.html" class="flex items-center shrink-0 hover:opacity-80 transition-opacity">
+                <img src="/logo.png" alt="Clínica Iris" class="h-10 w-auto object-contain">
+            
+            </a>
+
+           <div class="hidden md:flex items-center gap-8 font-medium text-slate-600 text-sm">
+                <a href="/index.html" class="hover:text-iris-blue transition-colors">Inici</a>
+                <a href="/trabaja.html" class="hover:text-iris-blue transition-colors">Treballa</a>
+                <a href="/serveis.html" class="hover:text-iris-blue transition-colors">Serveis</a>
+                <a href="/equip.html" class="hover:text-iris-blue transition-colors">Equip</a>
+                <a href="/cita.html" class="bg-iris-blue hover:bg-iris-dark text-white px-5 py-2.5 rounded-full transition-all shadow-lg hover:shadow-iris-blue/30">
+                    Demanar Cita
+                </a>
+            </div>
+
+            <button id="menu-btn" class="md:hidden text-slate-600 hover:text-iris-blue focus:outline-none">
+                <i data-lucide="menu" class="w-6 h-6"></i>
+            </button>
+        </div>
+
+        <div id="mobile-menu" class="hidden absolute top-20 left-4 right-4 glass rounded-2xl p-6 shadow-xl flex-col gap-4 text-center md:hidden transform origin-top">
+            <a href="#inici" class="mobile-link py-2 hover:text-iris-blue font-medium">Inici</a>
+            <a href="#serveis" class="mobile-link py-2 hover:text-iris-blue font-medium">Serveis</a>
+            <a href="#equip" class="mobile-link py-2 hover:text-iris-blue font-medium">Equip</a>
+            <hr class="border-slate-200">
+            <a href="#" class="bg-iris-blue text-white py-3 rounded-xl shadow-md flex justify-center items-center gap-2">
+                Demanar Cita
+            </a>
+        </div>
+    </nav>
+
+    <section id="inici" class="pt-40 pb-20 px-4 flex flex-col items-center justify-center text-center min-h-[60vh]">
+        <span class="inline-block py-1 px-3 rounded-full bg-iris-light text-iris-dark text-xs font-bold tracking-wider mb-6 border border-iris-blue/20">
+            NOVA TECNOLOGIA OCT 2025
+        </span>
+        <h1 class="text-5xl md:text-7xl font-bold text-slate-900 mb-6 leading-tight">
+            Una nova visió <br/>
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-iris-blue to-iris-green">del teu futur</span>
+        </h1>
+        <p class="text-lg md:text-xl text-slate-500 max-w-2xl mb-10">
+            Oftalmologia integral d'avantguarda a Barcelona. unim tecnologia de precisió amb un tracte humà i proper.
+        </p>
+        <div class="flex flex-col md:flex-row gap-4">
+            <button class="bg-slate-900 text-white px-8 py-4 rounded-full font-medium hover:bg-slate-800 transition-colors shadow-xl">
+                Veure tractaments
+            </button>
+            <button class="bg-white text-slate-700 border border-slate-200 px-8 py-4 rounded-full font-medium hover:bg-slate-50 transition-colors flex items-center gap-2 justify-center">
+                <i data-lucide="phone" class="w-4 h-4 text-iris-green"></i> Contactar ara
+            </button>
+        </div>
+    </section>
+
+    <section id="serveis" class="py-20 px-4 bg-white/50">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16 max-w-2xl mx-auto">
+                <span class="text-iris-green text-sm font-bold tracking-widest uppercase">CARTERA DE SERVEIS</span>
+                <h2 class="text-3xl md:text-5xl font-bold text-slate-900 mt-2 mb-4">Cuidem de la teva salut visual</h2>
+                <p class="text-slate-600">Des de la revisió preventiva fins a la cirurgia avançada, oferim una atenció integral personalitzada.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="glass-card rounded-2xl p-8 hover:border-iris-blue group cursor-pointer">
+                    <div class="w-14 h-14 bg-iris-light rounded-2xl flex items-center justify-center text-iris-blue mb-6 group-hover:scale-110 transition-transform duration-300">
+                        <i data-lucide="glasses" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-800 mb-3 group-hover:text-iris-blue transition-colors">Optometria</h3>
+                    <ul class="text-sm text-slate-600 space-y-2">
+                        <li class="flex items-center gap-2"><div class="w-1.5 h-1.5 bg-iris-blue rounded-full"></div> Examen visual complet</li>
+                        <li class="flex items-center gap-2"><div class="w-1.5 h-1.5 bg-iris-blue rounded-full"></div> Fatiga visual</li>
+                        <li class="flex items-center gap-2"><div class="w-1.5 h-1.5 bg-iris-blue rounded-full"></div> Pediàtria</li>
+                    </ul>
+                </div>
+
+                <div class="glass-card rounded-2xl p-8 hover:border-iris-green group cursor-pointer">
+                    <div class="w-14 h-14 bg-green-50 rounded-2xl flex items-center justify-center text-iris-green mb-6 group-hover:scale-110 transition-transform duration-300">
+                        <i data-lucide="eye" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-800 mb-3 group-hover:text-iris-green transition-colors">Especialitats</h3>
+                    <ul class="text-sm text-slate-600 space-y-2">
+                        <li class="flex items-center gap-2"><div class="w-1.5 h-1.5 bg-iris-green rounded-full"></div> Retina i Glaucoma</li>
+                        <li class="flex items-center gap-2"><div class="w-1.5 h-1.5 bg-iris-green rounded-full"></div> Oculoplàstia</li>
+                        <li class="flex items-center gap-2"><div class="w-1.5 h-1.5 bg-iris-green rounded-full"></div> Estrabismes</li>
+                    </ul>
+                </div>
+
+                <div class="glass-card rounded-2xl p-8 hover:border-iris-dark group cursor-pointer">
+                    <div class="w-14 h-14 bg-blue-50 rounded-2xl flex items-center justify-center text-iris-dark mb-6 group-hover:scale-110 transition-transform duration-300">
+                        <i data-lucide="activity" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-800 mb-3 group-hover:text-iris-dark transition-colors">Cirurgia</h3>
+                    <ul class="text-sm text-slate-600 space-y-2">
+                        <li class="flex items-center gap-2"><div class="w-1.5 h-1.5 bg-iris-dark rounded-full"></div> Cataractes (LIO)</li>
+                        <li class="flex items-center gap-2"><div class="w-1.5 h-1.5 bg-iris-dark rounded-full"></div> Cirurgia menor</li>
+                        <li class="flex items-center gap-2"><div class="w-1.5 h-1.5 bg-iris-dark rounded-full"></div> Intravitreas</li>
+                    </ul>
+                </div>
+
+                <div class="glass-card rounded-2xl p-8 hover:border-slate-400 group cursor-pointer">
+                    <div class="w-14 h-14 bg-slate-100 rounded-2xl flex items-center justify-center text-slate-600 mb-6 group-hover:scale-110 transition-transform duration-300">
+                        <i data-lucide="scan-eye" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-800 mb-3 group-hover:text-slate-600 transition-colors">Tecnologia</h3>
+                    <ul class="text-sm text-slate-600 space-y-2">
+                        <li class="flex items-center gap-2"><div class="w-1.5 h-1.5 bg-slate-400 rounded-full"></div> OCT / Retinografia</li>
+                        <li class="flex items-center gap-2"><div class="w-1.5 h-1.5 bg-slate-400 rounded-full"></div> Camp visual</li>
+                        <li class="flex items-center gap-2"><div class="w-1.5 h-1.5 bg-slate-400 rounded-full"></div> Làser YAG</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // 1. Inicializar iconos Lucide
+        lucide.createIcons();
+
+        // 2. Lógica del Menú Móvil
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            mobileMenu.classList.toggle('flex');
+        });
+
+        // Cerrar menú al hacer click en un enlace
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                mobileMenu.classList.remove('flex');
+            });
+        });
+    </script>
+    
+</body>
+</html>
